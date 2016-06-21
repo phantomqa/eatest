@@ -1,8 +1,23 @@
 import phantom.rules as phantom
 import json
 
+def geolocate_ip_1(container, action=None, success=None, results=None, handle=None, filtered_ids=None):
+    
+    
+    parameters = []
+    
+    parameters.append({
+        'ip': "1.1.1.1",
+    })
+
+
+    phantom.act("geolocate ip", parameters=parameters, assets=['maxmind'], name="geolocate_ip_1")    
+
+    return
+
+
 def on_start(container):
-    (container)
+    geolocate_ip_1(container)
 
     return
 
