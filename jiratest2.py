@@ -33,6 +33,7 @@ def list_tickets(action, success, container, results, handle, filtered_artifacts
             'start_index': "",
         })
 
+    phantom.debug('ticket list: {}'.format(parameters))
     if parameters:
         phantom.act("list tickets", parameters=parameters, assets=['jira'], name="list_tickets")    
     
